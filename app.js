@@ -1,6 +1,6 @@
 function searchIngredients() {
     const ingredient = document.getElementById("ingredientInput").value;
-    const apiKey = "38dcfd6bb4204473ad74f73a15a2e904"; // Replace with your actual API key
+    const apiKey = "38dcfd6bb4204473ad74f73a15a2e904"; 
 
     // Make an API call to Spoonacular
     fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&number=20&apiKey=${apiKey}`)
