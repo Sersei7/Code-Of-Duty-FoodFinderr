@@ -26,6 +26,7 @@ function searchIngredients() {
                 recipeCard.appendChild(recipeTitle);
                 resultDiv.appendChild(recipeCard);
             });
+            resultDiv.style.display = "block";
         })
         .catch(error => {
             console.error("Error fetching data:", error);
