@@ -2,12 +2,12 @@ function searchIngredients() {
     const ingredient = document.getElementById("ingredientInput").value;
     const apiKey = "38dcfd6bb4204473ad74f73a15a2e904"; 
 
-    // Make an API call to Spoonacular
+    
     fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredient}&number=20&apiKey=${apiKey}`)
         .then(response => response.json())
         .then(data => {
             const resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = ""; // Clear previous results
+            resultDiv.innerHTML = ""; 
 
             data.forEach(recipe => {
                 const recipeCard = document.createElement("div");
