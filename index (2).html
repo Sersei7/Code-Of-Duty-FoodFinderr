@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Findrr</title>
+    <link rel="icon" href="static/title-logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <header class="brand-logo">
+        <img src="static/title-logo.jpg">
+        <h1>FoodFindrr..</h1>  
+    </header>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #FCA336;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Saved Recipes</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">My feed</a></li>
+                  <li><a class="dropdown-item" href="#">Trending recipes</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Reviews</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="index2.html">
+              <button class="btn btn-outline-primary logbtn">Log in</button>
+              <button class="btn btn-outline-primary logbtn">Sign up</button>
+            </a>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="flex-container">
+            <input  class="search-bar"  type="text" id="ingredientInput" placeholder="Enter ingredients..." >
+            <button onclick="searchIngredients()" class="btn-main search-active"><i class="fa-solid fa-magnifying-glass"></i>Search Recipes</button>
+            <button onclick="searchIngredients()" class="btn-main search-unactive"><i class="fa-solid fa-magnifying-glass"></i></button>        
+    </div>
+    <div class="categories">
+        <h4>Categories</h4>
+        <div class="cards-container">
+          <div class="cards">
+            <img src="static/soup.jpg">
+            <p>Soups</p>
+          </div>
+          <div class="cards">
+            <img src="static/Indian food.jpg">
+            <p>Indian</p>
+          </div>
+          <div class="cards">
+            <img src="static/italian food.jpg">
+            <p>Italian</p>
+          </div>
+          <div class="cards">
+            <img src="static/japanese food.jpg">
+            <p>Japanese</p>
+          </div>
+          <div class="cards">
+            <img src="static/mexican.jpg">
+            <p>Mexican</p>
+          </div>
+          <div class="cards">
+            <img src="static/continental.jpg">
+            <p>Continental</p>
+          </div>  
+        </div>
+    </div>
+    <div class="filters">
+      <h4>Personalize your Experience : </h4>
+      <button class="filter-buttons btn-main">Pure Veg</button>
+      <button class="filter-buttons btn-main">Veg/non-Veg</button>
+      <button class="filter-buttons btn-main">Keto</button>
+      <button class="filter-buttons btn-main">Top-rated</button>
+    </div>
+    <div class="recipe-list" id="result"></div>
+    
+    <script src="scripts/app.js"></script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>We are a brand based out of India trying to help everyone cook their meal.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" target="https://www.facebook.com/"><img src="static/facebook.png" alt="Facebook"></a>
+                    <a href="#" target="https://twitter.com/"><img src="static/twitter.png" alt="Twitter"></a>
+                    <a href="#" target="https://www.instagram.com"><img src="static/instagram.jpeg" alt="Instagram"></a>
+                    <a href="#" target="linkedin.com"><img src="linkedin.png" alt="static/linkedin.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FoodFindrr. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
